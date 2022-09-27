@@ -1,0 +1,9 @@
+{
+    "name": "dante/notas",
+    "autoload": {
+        "psr-4": {
+            "Dante\\Notas\\": "src/"
+        }
+    },
+    "require": {}
+}
