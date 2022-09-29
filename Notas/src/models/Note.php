@@ -17,30 +17,37 @@ class Note extends Database {
 
     public function save()
     {
-        $query = $this->connect()->prepare("INSERT INTO notas (uuid, title, content, updated) VALUES (:uuid, :title, :content, NOW())");
-         $query->execute(['id' => $this->getUUID(), 'title' => $this->getTitle(), 'content' => $this->getContent()]);
+        $query = $this->connect()->prepare("INSERT INTO notes (uuid, title, content, updated) VALUES (:uuid, :title, :content, NOW())");
+         $query->execute(['uuid' => $this->getUUID(), 'title' => $this->getTitle(), 'content' => $this->getContent()]);
     }
 
     public function update()
     {
-        $query = $this->connect()->prepare("UPDATE notas SET title = :title, content = :content, updated = NOW() WHERE uuid = :id");
-         $query->execute(['id' => $this->getUUID(), 'title' => $this->getTitle(), 'content' => $this->getContent()]);
+        $query = $this->connect()->prepare("UPDATE notes SET title = :title, content = :content, updated = NOW() WHERE uuid = :uuid");
+         $query->execute(['uuid' => $this->uuid, 'title' => $this->title, 'content' => $this->content]);
     }
 
 public static function get($uuid){
 
 $db = new Database();
-$query = $db->connect()->prepare("SELECT * FROM notes WHERE uuid = id");
+$query = $db->connect()->prepare("SELECT * FROM notes WHERE uuid = :uuid");
 $query->execute(['uuid' => $uuid]);
 
 $note = Note::createFromArray($query->fetch(PDO::FETCH_ASSOC));
 return $note;
 }
 
+public static function createFromArray($arr):Note{
+    $note = new Note($arr['title'], $arr['content']);
+    $note->setUUID($arr['uuid']);
+
+    return $note;
+}
+
 public static function getAll(){
     $notes = [];
     $db = new Database();
-$query = $db->connect()->prepare("SELECT * FROM notes WHERE uuid = id");
+$query = $db->connect()->query("SELECT * FROM notes");
 
 while($r = $query->fetch(PDO::FETCH_ASSOC)){
 
@@ -54,12 +61,7 @@ return $notes;
 
 }
 
-public static function createFromArray($arr){
-    $note = new Note($arr['title'], $arr['content']);
-    $note->setUUID($arr['uuid']);
 
-    return $note;
-}
 
 
     public function setTitle($value)
@@ -82,7 +84,7 @@ public static function createFromArray($arr){
         $this->content = $value;
     }
 
-    public function getUUID(): string
+    public function getUUID()
     {
         return $this->uuid;
     }
