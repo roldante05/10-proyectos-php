@@ -9,7 +9,10 @@ if (count($_POST) > 0) {
 
     $note = new Note($title, $content);
     $note ->save();
-
+    // $crear = $_POST['crear'];
+    // if(isset($_POST['crear'])){
+    //     header('Location: http://localhost/proyectos-Php/Notas/?view=home');
+    // }
 }
 ?>
 <!DOCTYPE html>
@@ -34,7 +37,7 @@ if (count($_POST) > 0) {
     <form class="row" action="?view=create" method="POST">
             <input class="col-sm-12" name="title" type="text" placeholder="Title" />
             <textarea class="col-sm-12 my-4" name="content"></textarea>
-            <input class="btn btn-primary  col-sm-12" type="submit" value="Create note">
+            <input class="btn btn-primary  col-sm-12" name="crear" type="submit" value="Create note">
             
         </form>
     </div>

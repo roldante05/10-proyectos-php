@@ -45,7 +45,6 @@ else if(isset($_GET['id'])){
 <?php require 'src/views/resources/navbar.php' ?>
     <h1 class="my-2 text-center">View</h1>
     <div class="container">
-
         <form class="row" action="?view=view&id= <?php echo $note->getUUID(); ?> " method="POST">
             <input name="title" type="text" placeholder="Title" value="<?php echo $note->getTitle(); ?>" />
             <input class="col-sm-12" type="hidden" name="id" value="<?php echo $note->getUUID(); ?>">

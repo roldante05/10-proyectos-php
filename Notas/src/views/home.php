@@ -1,7 +1,14 @@
 <?php
 use Dante\Notas\models\Note;
-
 $notes = Note::getAll();
+
+
+
+    
+
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -20,14 +27,19 @@ $notes = Note::getAll();
     <h1 class="text-center my-3">HOME</h1>
 <div class="notes-container">
 
-    <?php foreach ($notes as $note ) { ?>
-        <a href="?view=view&id=<?php echo $note->getUUID(); ?>">
+    <?php foreach ($notes as $note) {  ?>
+       
+        <p >
             <div class="note-preview">
-                <div class="title"> <?php echo $note->getTitle(). "<br>". $note->getContent() ; ?> </div>
+                <h1 class="title text-center"> <?php echo $note->getTitle() ; ?>  </h1>
+                <p> <?php echo $note->getContent() ; ?> </p>
+                <div class="d-flex">
+                    <a class="btn btn-primary text-white" href="?view=view&id=<?php echo $note->getUUID(); ?>">Editar</a>
+                </div>
             </div>
-        </a>
-        <?php   } ?>
+            <?php   } ?> 
+        </p>
 </div>
-    
 </body>
+
 </html>
