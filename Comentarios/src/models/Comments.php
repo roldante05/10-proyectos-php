@@ -2,8 +2,8 @@
 namespace Dante\Comentarios\models;
 
 use PDO;
-// use Dante\Comentarios\lib\Database;
-use Database;
+use Dante\Comentarios\lib\Database;
+
 
 class Comment extends Database{
     private string $uuid;
