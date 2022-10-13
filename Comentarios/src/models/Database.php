@@ -1,10 +1,11 @@
-
 <?php
 
-namespace Dante\Comentarios\lib;
+namespace Dante\Comentarios\models;
 
 use PDO;
+
 use PDOException;
+
 
 class Database{
 
@@ -17,7 +18,7 @@ class Database{
     public function __construct()
     {
         $this->host = 'localhost';
-        $this->db = 'notas';
+        $this->db = 'comments';
         $this->user = 'root';
         $this->password = '';
         $this->charset = 'utf8mb4';

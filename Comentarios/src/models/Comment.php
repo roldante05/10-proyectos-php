@@ -2,7 +2,7 @@
 namespace Dante\Comentarios\models;
 
 use PDO;
-use Dante\Comentarios\lib\Database;
+use Dante\Comentarios\models\Database;
 
 
 class Comment extends Database{
@@ -17,7 +17,7 @@ class Comment extends Database{
 
     public function save(){
         $query = $this->connect()->prepare("INSERT INTO comments (uuid, username, text, url, date) VALUES(:uuid,:username,:text,:url, NOW())");
-        $query->execute(['uuid' => $this->uuid, 'username' => $this->username, 'text' => $this->username, 'url' => $this->url]);
+        $query->execute(['uuid' => $this->uuid, 'username' => $this->username, 'text' => $this->text, 'url' => $this->url]);
     }
 
     public static function getAll($url){
