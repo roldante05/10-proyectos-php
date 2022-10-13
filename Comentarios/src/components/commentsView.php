@@ -22,6 +22,9 @@ if(isset($_POST['username']) && isset($_POST['text']) && $url !== ''){
     $comment = new Comment($username, $text, $url);
     $comment->save();
 }
+if(isset($_POST['enviar'])){
+    header("Location:?view=page1");
+}
 
 
 
@@ -29,12 +32,12 @@ if(isset($_POST['username']) && isset($_POST['text']) && $url !== ''){
 <div class=" comments-container">
     <div class="row">
 
-        <form action="?view=page1" method="POST">
+        <form action="" method="POST">
             <input class="form-control" type="text" name="username" required placeholder="Tu usuario...">
             
             <textarea class="form-control" name="text" id="" cols="30" rows="5" required placeholder="comentario"></textarea>
             
-            <input class="btn btn-primary" type="submit" class="button" value="Publicar comentario"/>
+            <input name="enviar" class="btn btn-primary" type="submit" class="button" value="Publicar comentario"/>
         </form>
     </div>
     </div>
