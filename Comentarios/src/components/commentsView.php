@@ -1,10 +1,19 @@
+<link rel="stylesheet" href="src/components/main.css">
 <?php
+
 use Dante\Comentarios\models\Comment;
-// global $url;
+
+$params = explode('&', $_SERVER['QUERY_STRING']);
 
 $url = '';
+
+foreach($params as $param){
+    if(strpos($param, 'view=') === 0){
+        $url = explode('=', $param)[1];
+    }
+}
    
-if(isset($_POST['username']) && isset($_POST['text']) && $url === ''){
+if(isset($_POST['username']) && isset($_POST['text']) && $url !== ''){
     $username = $_POST['username'];
     $text = $_POST['text'];
 
@@ -15,7 +24,6 @@ if(isset($_POST['username']) && isset($_POST['text']) && $url === ''){
 
 
 ?>
-<link rel="stylesheet" href="src/lib/main.css">
 <div class="comments-container">
     <form action="" method="POST">
         <input type="text" name="username" required placeholder="Tu username...">
