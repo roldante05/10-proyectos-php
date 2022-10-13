@@ -7,7 +7,7 @@
     <title>Home</title>
 </head>
 <body>
-    <h1>INICIO</h1>
+    <h1 class="text-center my-3">Publica tu comentario</h1>
 
     <?php require 'components/commentsView.php' ?>
 </body>

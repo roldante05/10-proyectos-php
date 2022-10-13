@@ -1,3 +1,5 @@
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 <link rel="stylesheet" href="src/components/main.css">
 <?php
 
@@ -24,28 +26,31 @@ if(isset($_POST['username']) && isset($_POST['text']) && $url !== ''){
 
 
 ?>
-<div class="comments-container">
-    <form action="" method="POST">
-        <input type="text" name="username" required placeholder="Tu username...">
+<div class=" comments-container">
+    <div class="row">
 
-        <textarea name="text" id="" cols="30" rows="10" required placeholder="comentario"></textarea>
+        <form action="?view=page1" method="POST">
+            <input class="form-control" type="text" name="username" required placeholder="Tu usuario...">
+            
+            <textarea class="form-control" name="text" id="" cols="30" rows="5" required placeholder="comentario"></textarea>
+            
+            <input class="btn btn-primary" type="submit" class="button" value="Publicar comentario"/>
+        </form>
+    </div>
+    </div>
 
-        <input type="submit" class="button" />
-    </form>
-
-    <div class="comments">
+    <div class="container-fluid comments">
         <?php
       $comments = Comment::getAll($url);
 
         foreach ($comments as $comment) {
         ?>
-            <div class="comment">
-                <div class="username"><?php echo $comment->getUsername() ?></div>
-                <div class="text"><?php echo $comment->getText() ?></div>
-                <div class="date"><?php echo $comment->getDate() ?></div>
+            <div class="comment shadow">
+                <p class="username my-1"><?php echo $comment->getUsername() ?></p>
+                <div class="text text-center py-4"><?php echo $comment->getText() ?></div>
+                <div class="date text-end my-2"><?php echo $comment->getDate() ?></div>
             </div>
         <?php
         }
         ?>
     </div>
-</div>
