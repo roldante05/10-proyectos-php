@@ -11,5 +11,7 @@
             "email": "danteroldan72@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "intervention/image": "^2.7"
+    }
 }
