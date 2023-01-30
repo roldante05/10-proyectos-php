@@ -54,8 +54,8 @@
                                 const sizeDiv = document.querySelector('#size-' + id);
                             
                                 console.log(`Uploaded ${e.loaded} of ${e.total} bytes `);
-                                container.style.height = '10px';
-                                container.style.backgroundColor = 'blue';
+                                // container.style.height = '10px';
+                                // container.style.backgroundColor = 'blue';
                                 container.style.width = ((e.loaded / e.total) * 100) + '%' 
                                 sizeDiv.textContent = ((e.loaded / e.total) * 100).toFixed(0) + '%' 
                             }
