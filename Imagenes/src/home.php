@@ -1,3 +1,8 @@
+<?php
+// phpinfo();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,5 +13,12 @@
 </head>
 <body>
     <h1>Inicio</h1>
+
+    <form action="?view=upload" method="POST" enctype="multipart/form-data" >
+       <label for="file">Subir imagen</label>
+    <input type="file" name="file" id="id">
+    <br>
+    <input type="submit" value="Subir">
+    </form>
 </body>
 </html>
