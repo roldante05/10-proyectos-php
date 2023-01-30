@@ -26,8 +26,6 @@
 
     <div id="files-container"></div>
 
-
-
     <script src="src/resources/app.js"></script>
 </body>
 
