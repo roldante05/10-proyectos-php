@@ -1,0 +1,15 @@
+{
+    "name": "dante/markdown",
+    "autoload": {
+        "psr-4": {
+            "Dante\\Markdown\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dante Roldan",
+            "email": "danteroldan72@gmail.com"
+        }
+    ],
+    "require": {}
+}
