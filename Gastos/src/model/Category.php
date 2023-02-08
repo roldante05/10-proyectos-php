@@ -1,8 +1,8 @@
 <?php 
 
-namespace Vidamrr\Gastos\model;
+namespace Dante\Gastos\model;
 
-use Vidamrr\Gastos\model\Database;
+use Dante\Gastos\model\Database;
 use PDO;
 
 class Category extends Database

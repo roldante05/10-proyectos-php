@@ -1,6 +1,6 @@
 <?php
 
-namespace Vidamrr\Gastos\model;
+namespace Dante\Gastos\model;
 
 use PDO;
 use PDOException;

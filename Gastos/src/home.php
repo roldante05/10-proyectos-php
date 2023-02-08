@@ -1,3 +1,10 @@
+<?php 
+use Dabte\Gastos\model\Expense;
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
