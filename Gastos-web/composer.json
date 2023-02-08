@@ -1,0 +1,15 @@
+{
+    "name": "dante/gastos",
+    "autoload": {
+        "psr-4": {
+            "Dante\\Gastos\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dante Roldan",
+            "email": "danteroldan72@gmail.com"
+        }
+    ],
+    "require": {}
+}
