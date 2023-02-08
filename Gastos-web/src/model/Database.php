@@ -1,6 +1,6 @@
 <?php
 
-namespace Dante\Gastos\lib;
+namespace Dante\Gastos\model;
 
 use PDO;
 use PDOException;
@@ -19,7 +19,7 @@ class Database
         $this->host = 'localhost';
         $this->db = 'gastos';
         $this->user = 'root';
-        $this->password = 'password';
+        $this->password = '';
         $this->charset = 'utf8mb4';
     }
 
