@@ -5,7 +5,7 @@ if(isset($_GET['view'])){
     require  "src/".$view.".php";
     
 } else {
-    require "src/page1.php";
+    require "src/home.php";
 }
 
 
