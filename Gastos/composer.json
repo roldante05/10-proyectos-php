@@ -1,8 +1,8 @@
 {
-    "name": "dante/app-gastos",
+    "name": "dante/gastos",
     "autoload": {
         "psr-4": {
-            "Dante\\AppGastos\\": "src/"
+            "Dante\\Gastos\\": "src/"
         }
     },
     "authors": [
