@@ -17,11 +17,7 @@ $total = Expense::getTotal($expenses);
 </head>
 
 <body>
-    <div class="container-nav purple topBotomBordersIn">
-        <a href="?view=home">INICIO</a>
-        <a href="?view=crear-categoria">CREAR CATEGORIA</a>
-        <a href="?view=crear-expensa">CREAR EXPENSA</a>
-    </div>
+<?php require 'src/resources/navbar.php' ?>
     <div class="container">
 
         <div class="expenses">
