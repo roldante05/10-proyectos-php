@@ -2,7 +2,7 @@
 
 namespace Dante\Gastos\model;
 
-use Dante\Gastos\lib\Database;
+use Dante\Gastos\model\Database;
 use PDO;
 
 class Category extends Database
