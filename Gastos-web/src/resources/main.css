@@ -1,17 +1,19 @@
 @import 'https://fonts.googleapis.com/css?family=Raleway';
 
-html, body
-{
-    margin: 0px;
+body {
+    font-family: Raleway;
+  padding: 0;
+  margin: 0;
+  background-color: dodgerblue;
 }
-
 
 div.container-nav
 {
     font-family: Raleway;
     margin: 0 auto;
 	padding: 3em 3em;
-	text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 div.container-nav a
@@ -95,3 +97,69 @@ div.topBotomBordersIn a:hover:before, div.topBotomBordersIn a:hover:after
     transform: translateY(0px);
 }
 
+
+.container {
+    width: 500px;
+    background-color: rgb(85, 82, 82);
+    border-radius: 3px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 100px auto;
+    color: white;
+    font-weight: bold;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  input[type="text"],
+input[type="number"],
+select {
+  padding: 10px;
+  border: solid 1px #999;
+  border-radius: 3px;
+}
+
+input[type="submit"] {
+  border: none;
+  padding: 10px 15px;
+  background-color: darkslateblue;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.categorias,
+.expenses {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.categoria {
+  padding: 10px;
+  border: solid 1px #ccc;
+}
+
+.expense {
+  display: flex;
+  justify-content: space-between;
+  border: solid 1px #673ab7;
+  padding: 10px;
+}
+
+.expense div {
+  min-width: 33%;
+}
+
+.expense div:nth-child(3) {
+  text-align: right;
+  font-weight: bold;
+}
+
+.expense div:nth-child(2) {
+  text-align: center;
+}
