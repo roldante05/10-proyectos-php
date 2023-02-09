@@ -17,20 +17,34 @@ $total = Expense::getTotal($expenses);
 </head>
 
 <body>
-<div class="container-nav purple topBotomBordersIn">
-  <a href="?view=home">INICIO</a>
-  <a href="?view=crear-categoria" >CREAR CATEGORIA</a>
-  <a href="?view=crear-expensa" >CREAR EXPENSA</a>
-</div>
+    <div class="container-nav purple topBotomBordersIn">
+        <a href="?view=home">INICIO</a>
+        <a href="?view=crear-categoria">CREAR CATEGORIA</a>
+        <a href="?view=crear-expensa">CREAR EXPENSA</a>
+    </div>
     <div class="container">
 
         <div class="expenses">
 
             <div>Total: $<?php echo $total; ?></div>
-            <?php
 
+            <?php
             foreach ($expenses as $expense) {
-                echo "<div class='expense'><div>{$expense->getTitle()}</div><div>{$expense->getCategory()->getName()}</div><div>$ {$expense->getExpense()}</div></div>";
+            ?>
+
+                <div class='expense'>
+                    <div>
+                        <?php echo $expense->getTitle() ?>
+                    </div>
+                    <div>
+                        <?php echo $expense->getCategory()->getName() ?>
+                    </div>
+                    <div>
+                        $<?php echo $expense->getExpense() ?>
+                    </div>
+                </div>
+
+            <?php
             }
             ?>
         </div>
