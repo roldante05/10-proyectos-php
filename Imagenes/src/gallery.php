@@ -11,19 +11,25 @@
 
 <body>
 
-    <main>
+<div class="nav-galeria" >
+    <a href="?view=home" class="btn-galeria" > Ir a inicio </a>
+    <a ></a>
+</div>
+<h1 class="container-menu title-galeria">Galeria</h1>
+    
+    <div class="container-galeria">
         <?php
 
         $arrFiles = scandir(__DIR__ . '/img/thumbnails');
 
         foreach ($arrFiles as $file) {
             if (strlen($file) > 2) {
-                echo '<div class="item" ><a href="src/img/original/' . $file . '"><img src="src/img/thumbnails/' . $file . '" /></a></div>';
+                echo '<div class="nav_list_item  file-item" ><a href="src/img/original/' . $file . '"><img src="src/img/thumbnails/' . $file . '" /></a></div>';
             }
         }
 
         ?>
-    </main>
+    </div>
 </body>
 
 </html>
