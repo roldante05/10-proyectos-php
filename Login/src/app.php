@@ -6,7 +6,7 @@ if(isset($_GET['view'])){
  require 'src/'. $view . '.php';
 } else {
     
- require 'src/inicio.php';
+ require 'src/bienvenido.php';
 }
 
 ?>
