@@ -1,9 +1,29 @@
-<div class="carousel-item">
-    <div class="abs-center">
+<?php
+
+require 'guardar.php';
+
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/resources/main.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Registrarse</title>
+</head>
+<body>
+    
+
+    <div class="abs-center bg-form">
+
+        <?php echo $alerta; ?>
         <div class="my-3">
             <h1>Registrate</h1>
         </div>
-        <form action="#" method="POST" class="border p-3 form">
+        <form action="?view=registrar" method="POST" class="border p-3 form">
             <div class="form-group mb-3">
                 <label for="email">Nombre y Apellido</label>
                 <input type="text" name="txtNombre" id="email" class="form-control">
@@ -20,10 +40,12 @@
         </form>
         <p>¿Ya tenes cuenta?
 
-            <a class="mt-3" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <a class="mt-3" type="button" href="?view=ingresar">
 
                 Ingresa aca!
             </a>
         </p>
     </div>
-</div>
+
+</body>
+</html>

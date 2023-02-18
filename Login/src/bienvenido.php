@@ -13,12 +13,12 @@
 <body>
   <div class="container-fluid bg-principal">
     <div class="row">
-      <div id="carouselExample" class="carousel slide">
-        <div class="carousel-inner">
-          
-         <?php require 'src/ingresar.php' ?>
-         <?php require 'src/registrar.php' ?>
-         
+      <div class="abs-center">
+        <p>Bienvenido al sistema</p>
+        <p>Inicia Sesión en el sistema para continuar</p>
+        <div>
+          <a href="?view=ingresar" class="btn btn-success">Iniciar Sesión</a>
+          <a href="?view=registrar" class="btn btn-success" >Registrarme</a>
         </div>
       </div>
     </div>
