@@ -19,7 +19,7 @@
     <h1>Te damos la bienvenida <?php if(isset($user)){ echo $user; } ?></h1>
     
 
-        <a href="?view=cerrar-session" class="btn btn-dark">Cerrar Sesión </a>
+        <a href="?form=cerrar-session" class="btn btn-dark">Cerrar Sesión </a>
     
 </body>
 </html>

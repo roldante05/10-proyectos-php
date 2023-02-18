@@ -17,8 +17,8 @@
         <p>Bienvenido al sistema</p>
         <p>Inicia Sesión en el sistema para continuar</p>
         <div>
-          <a href="?view=ingresar" class="btn btn-success">Iniciar Sesión</a>
-          <a href="?view=registrar" class="btn btn-success" >Registrarme</a>
+          <a href="?form=ingresar" class="btn btn-success">Iniciar Sesión</a>
+          <a href="?form=registrar" class="btn btn-success" >Registrarme</a>
         </div>
       </div>
     </div>
