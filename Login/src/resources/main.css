@@ -14,3 +14,8 @@
 .form {
   width: 450px;
 }
+
+.bg-form{
+  background-color: #343541;
+  color: white;
+}
