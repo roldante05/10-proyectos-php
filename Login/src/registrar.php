@@ -19,7 +19,12 @@ require 'guardar.php';
 
     <div class="abs-center bg-form">
 
-        <?php echo $alerta; ?>
+        <?php 
+        if(isset($alerta)){
+
+            echo $alerta; 
+        }
+        ?>
         <div class="my-3">
             <h1>Registrate</h1>
         </div>
