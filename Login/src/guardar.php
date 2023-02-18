@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $alerta;
 
-    if($datos['nombre'] != '' && $datos['email'] != '' && $datos['contraseña'] != '' ){
+    if($datos['nombre'] != '' && $datos['email'] != '' && $datos['contrasena'] != '' ){
     // Convertimos el array a JSON
     $datos_json = json_encode($datos);
 
