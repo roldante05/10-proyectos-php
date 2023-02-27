@@ -3,6 +3,17 @@
   color: white;
 }
 
+.body {
+  font-family: Arial, sans-serif;
+  background-color: #292b2a;
+			background-image: radial-gradient(#f01515 2px, transparent 2px), radial-gradient(#fff 2px, transparent 2px);
+			background-position: 0 0, 25px 25px;
+			background-size: 50px 50px;
+			overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
 .abs-center {
   display: flex;
   flex-direction: column;
@@ -15,7 +26,173 @@
   width: 450px;
 }
 
+.form-bg{
+  margin: 0;
+			padding: 0;
+			background-color: #333;
+			background-image: radial-gradient(#fff 2px, transparent 2px), radial-gradient(#fff 2px, transparent 2px);
+			background-position: 0 0, 25px 25px;
+			background-size: 50px 50px;
+			overflow: hidden;
+}
+
 .bg-form{
-  background-color: #343541;
+      margin: 0px 340px;
+			padding: 30px;
+			background-color: rgba(51, 50, 50, 0.849);
+			border-radius: 5px;
+			box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      font-weight: 600;
+      color: wheat;
+}
+
+
+nav {
+  background-color: #333;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
   color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+nav .login {
+  margin-left: auto;
+}
+
+nav .login a {
+  padding: 5px 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+
+/* Estilos para la sección "Acerca de nosotros" */
+
+.container, .about-parrafo, .contact form  {
+  max-width: 800px !important;
+  margin: 0 auto;
+  padding: 50px;
+  color: #fff;
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.about {
+  margin: 50px auto;
+  max-width: 800px !important;
+  color: #fff;
+}
+
+.about h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about p, footer p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+
+/* Estilos para la sección "Contacto" */
+
+.contact {
+  margin: 50px auto;
+  max-width: 800px;
+}
+
+.contact h1 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: white;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.contact label {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.contact textarea{
+  resize: none;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  outline: none;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.contact button {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+  background-color: #555;
+}
+
+/* Animación para el botón de enviar */
+
+.contact button:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.contact button:hover:after {
+  width: 100%;
+  left: 0;
 }
