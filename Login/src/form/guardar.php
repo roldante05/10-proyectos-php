@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $datos = array(
         'nombre' => $_POST['txtNombre'],
         'email' => $_POST['txtEmail'],
-        'contraseña' => $_POST['txtPassword']
+        'contrasena' => $_POST['txtPassword']
     );
 
     $mensaje = array(
