@@ -1,15 +1,17 @@
 <?php
- use Dante\Markdown\model\Post;
 
-    if(isset($postName)){
-      
-        $post = new Post($postName . 'md');
-    }
+use Dante\Markdown\model\Post;
+
+if (isset($postName)) {
+
+    $post = new Post($postName . 'md');
+}
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,6 +19,7 @@
     <link rel="stylesheet" href="src/resources/main.css">
     <title>Blog</title>
 </head>
+
 <body>
 
     <?php
@@ -24,11 +27,12 @@
     ?>
     <div class="post-container">
 
-        <?php
-
-echo $post->getContent();
-
-?>
-</div>
+        <div class="">
+            <?php
+            echo $post->getContent();
+            ?>
+        </div>
+    </div>
 </body>
+
 </html>

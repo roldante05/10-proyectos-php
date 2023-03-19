@@ -70,6 +70,8 @@ nav {
     padding: 10px;
     box-sizing: border-box;
     background-color: #f39d3a;
+    border-radius: 30px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   }
 
   .post-container .item-post{
